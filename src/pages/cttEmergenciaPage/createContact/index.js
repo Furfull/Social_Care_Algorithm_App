@@ -17,7 +17,6 @@ export default function Login(){
 
     function contato(){
         data.push([nameCont, ' - ' , numCont])
-        console.log(data)
     }
 
     function Limpa(){

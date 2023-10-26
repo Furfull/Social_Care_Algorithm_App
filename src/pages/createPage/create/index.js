@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import { View, ScrollView, Text, TextInput, TouchableOpacity } from "react-native"
+import { View, ScrollView, Text, TextInput, TouchableOpacity, Modal } from "react-native"
 import styles from "./styles"
 
 
 export default function Creation({navigation}){
 
-    const [date, setDate] = useState(new Date())
+    const [state, setState] = useState(false)
 
     return(
         <View style={styles.MarginView}>
@@ -47,12 +47,42 @@ export default function Creation({navigation}){
             placeholder="**********"
             secureTextEntry={true}
             ></TextInput>
+            
+            <View style={styles.MarginViewLast}>
+            <Text style={styles.TextCadastro}
+                onPress={()=> setState(true)}
+                >Termos de uso</Text>
+            </View>
 
             <TouchableOpacity
             style={styles.button}
             onPress={()=> navigation.navigate('Login')}
-            ><Text style={styles.buttonText}>Entrar</Text>
+            ><Text style={styles.buttonText}>Criar</Text>
             </TouchableOpacity>
+
+            <View>
+
+            <Modal
+                visible={state}
+                animationType="fade"
+                transparent={true}
+                >
+                    <View style={styles.ModalStyleAjuda}>
+
+                    <Text style={styles.TextLogin}>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</Text>
+
+                    <View style={styles.MarginViewLast}>
+                        <TouchableOpacity
+                        style={styles.Button}
+                        onPress = {() => setState(!state)}
+                        ><Text style={styles.Text}>Fechar e aceitar</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    </View>
+                </Modal>
+
+            </View>
         </View>
     );
 }

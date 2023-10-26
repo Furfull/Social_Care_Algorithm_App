@@ -12,11 +12,13 @@ const styles = StyleSheet.create({
         borderRightWidth:4,
         borderRadius:10,
         borderColor: 'rgba(158, 150, 150, .3)',
+        
     },
     TextName:{
-        fontSize:16,
+        fontSize:20,
         fontWeight:"bold",
-        paddingLeft:"1%"
+        paddingLeft:"1%",
+        color:"#608EA9"
     },
     TextNameUser:{
         fontSize:16,

@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
         fontSize:15,
         color:"#2F89FA",
         textDecorationLine: 'underline',
-        paddingLeft:"33%"
+        paddingHorizontal:"40%",
+        width:"115%",
     },
     MarginView:{
         paddingTop:"10%",

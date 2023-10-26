@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     },
     Button:{
         borderRadius:15,
-        borderWidth:1,
         alignItems:"center",
         width:"40%",
         backgroundColor:"#608EA9",
@@ -48,7 +47,6 @@ const styles = StyleSheet.create({
     },
     ButtonEmergency:{
         borderRadius:15,
-        borderWidth:1,
         alignItems:"center",
         width:"30%",
         backgroundColor:"red",
@@ -58,7 +56,6 @@ const styles = StyleSheet.create({
     },
     ButtonEmergencyPopUp:{
         borderRadius:15,
-        borderWidth:1,
         alignItems:"center",
         width:"40%",
         backgroundColor:"red",
@@ -108,7 +105,7 @@ const styles = StyleSheet.create({
     },
     ModalStyleAjuda:{
         width:"50%",
-        height:"25%",
+        height:"30%",
         backgroundColor: '#ffffff',
         marginTop:"50%",
         marginLeft:"25%",

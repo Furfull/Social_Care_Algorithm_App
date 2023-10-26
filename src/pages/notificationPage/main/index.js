@@ -1,6 +1,7 @@
 import React from "react";
 import { View, ScrollView, RefreshControl } from "react-native"
 import Notification from "../notification"
+import * as service from "../../../service/service"
 
 export default function MainNotification(){
 
@@ -13,15 +14,11 @@ export default function MainNotification(){
         }, 2000);
     }, []);
 
-    data = [{id:1, date:"20-10-2023", message:"teste "}, 
-    {id:2, date:"21-10-2023", message:"teste "},
-    {id:3, date:"21-10-2023", message:"teste "},
-    {id:5, date:"21-10-2023", message:"teste "},
-    {id:6, date:"21-10-2023", message:"teste "},
-    {id:7, date:"21-10-2023", message:"teste ja"},
-    {id:8, date:"21-10-2023", message:"teste "},
-    {id:4, date:"21-10-2023", message:"teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste "}
-]
+    const response = service.fecthUrl();
+
+    console.log(response)
+
+    data = [{id:1, date:"20-10-2023", message:"teste "}]
 
     return(
         <ScrollView

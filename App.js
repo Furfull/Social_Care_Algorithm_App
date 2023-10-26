@@ -11,6 +11,7 @@ import MainPermissions from "./src/pages/permissionsPage/main"
 import MainProfile from "./src/pages/profilePage/main"
 import MainNotification from "./src/pages/notificationPage/main"
 import Create from "./src/pages/createPage/main"
+import MainReason from "./src/pages/reasonPage/main"
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -46,6 +47,13 @@ function Pages() {
           ),
         }}
         />
+        <Tab.Screen name="Razões" component={MainReason} 
+        options={{
+          headerShown: false,
+          tabBarIcon: () => (
+            <AntDesign name="hearto" size={24} color="black" />
+          ),
+        }}/>
         <Tab.Screen name="Perfil" component={MainProfile} 
         options={{
           headerShown: false,
