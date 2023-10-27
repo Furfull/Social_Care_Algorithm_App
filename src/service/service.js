@@ -1,16 +1,5 @@
-export const fecthUrl = async () => {
-    try {
-      const response = await fetch(
-        "http://192.168.0.75:8000/ML_response/get-status-health/"
-      );
-      if (!response.ok) {
-        return response;
-      } else {
-        const data = await response.json();
-        return data;
-      }
-    } catch (error) {
-      console.error("Erro na requisição:", error);
-      throw error;
-    }
-  };
+
+export default async function Getter(){ 
+  return await fetch('https://f1df-2804-14d-5c42-8652-4ce5-5e4-1603-e9a8.ngrok-free.app/notificacao/get-notification/1')
+  .then((response) => response.json()); }
+

@@ -4,7 +4,9 @@ const styles = StyleSheet.create({
     boxTitle: {
         justifyContent:"center",
         flexDirection: 'row',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        borderBottomWidth:1,
+        borderBottomColor: "#A9A9A9"
     },
     textTitle:{
         color: "#000000",
@@ -32,13 +34,14 @@ const styles = StyleSheet.create({
         backgroundColor:"#FF7F00",
         borderRadius:200,
         margin:"3%",
-        marginLeft:"35%",
+        marginLeft:"34%",
     },
     TextName:{
         color: "#000000",
         fontSize:18,
-        paddingRight:"58%",
-        fontWeight:"bold"
+        fontWeight:"bold",
+        textAlign:"center",
+        marginBottom:"1%",
     },
     TextNameUser:{
         color: "#000000",

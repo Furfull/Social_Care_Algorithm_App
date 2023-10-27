@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     View:{
         color: "#white",
         width:"95%",
-        margin:"2%",
+        margin:"1%",
         backgroundColor:"white",
         borderWidth:1,
         borderRadius:15,
@@ -14,9 +14,10 @@ const styles = StyleSheet.create({
         borderColor: 'rgba(158, 150, 150, .3)',
     },
     TextName:{
-        fontSize:16,
+        fontSize:20,
         fontWeight:"bold",
-        paddingLeft:"1%"
+        paddingLeft:"1%",
+        color:"#608EA9"
     },
     TextNameUser:{
         fontSize:16,

@@ -14,7 +14,7 @@ export default function Title(){
             <Image style={styles.stretch1} source={require("D:/SCA/sca-app/src/assets/negocinho.png")}></Image>
             
             <Text style={styles.textTitle}>Permissões</Text>
-            <Text style={styles.textTitleBody}>Escolha as redes que gostaria de ativar a proteção ativa do SCA.</Text>
+            <Text style={styles.textTitleBody}>Escolha as redes que gostaria de ativar a proteção do SCA.</Text>
         </View>
     );
 }

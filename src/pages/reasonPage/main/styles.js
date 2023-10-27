@@ -14,6 +14,19 @@ const styles = StyleSheet.create({
         borderRadius:10,
         borderColor: 'rgba(158, 150, 150, .3)',
     },
+    ViewInput:{
+        color: "#white",
+        width:"95%",
+        height: "10%",
+        marginHorizontal:"2%",
+        backgroundColor:"white",
+        borderWidth:1,
+        borderRadius:15,
+        borderBottomEndRadius:0,
+        borderBottomStartRadius:0,
+        borderRadius:10,
+        borderColor: 'rgba(158, 150, 150, .3)',
+    },
     ViewCenter:{
         alignContent:"center",
         justifyContent:"center"
@@ -37,14 +50,15 @@ const styles = StyleSheet.create({
         paddingBottom:"3%"
     },
     Button:{
-        borderRadius:10,
+        borderRadius:15,
+        borderTopEndRadius:0,
+        borderTopStartRadius:0,
         alignItems:"center",
-        width:"90%",
+        width:"95%",
+        marginHorizontal:"2%",
         backgroundColor:"#608EA9",
         paddingTop:"3%",
         paddingBottom:"3%",
-        marginHorizontal:"5%",
-        
     },
 })
 

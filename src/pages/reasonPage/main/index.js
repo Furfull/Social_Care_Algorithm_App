@@ -14,22 +14,23 @@ export default function (){
         setRefreshing(false);
         }, 2000);}, []);
 
-        const [data, setData] = useState([{key:Math.random(),date:"28/10/2023",message:"O NEXT é épico!!!"}])
+        const [data, setData] = useState([{key:Math.random(),date:"28/10/2023",message:"O NEXT é épico"},
+                                        {key:Math.random(),date:"28/10/2023",message:":)"},
+                                        {key:Math.random(),date:"28/10/2023",message:"Esse aplicativo é INCRIVEL!!!"}])
 
         const [imessage, setMessage] = useState('');
 
     function postar(){
         data.push({key:Math.random(),date:"28/10/2023",message:imessage})
-        console.log(data)
     }
 
     return(
         <View>
             <Logo></Logo>
             
-            <Text style={styles.textTitleBody}>Lembre-se sempre de tentar ver o lado bom, conte nos a razão para continuar de hoje:</Text>
+            <Text style={styles.textTitleBody}>Lembre-se sempre de tentar ve o lado bom, conte-nos algo bom que aconteceu no seu dia:</Text>
             
-            <View style={styles.View}>
+            <View style={styles.ViewInput}>
                 <TextInput
                 style={styles.TextNameUser}
                 onChangeText={newText => setMessage(newText)}

@@ -12,8 +12,9 @@ export default function Socials(){
 
     const [state, setState] = useState(false);
 
-    const toggleSwitch = () => setState(previousState => !previousState);
+    const toggleSwitch = () => setState(previousState => previousState);
 
+    const offColor = '#A9A9A9'
 
     return(
         <View style={styles.boxTitle}>
@@ -27,7 +28,7 @@ export default function Socials(){
             <ToggleSwitch
                 isOn={stateFacebook}
                 onColor="#337FFF"
-                offColor="#F5F1F2"
+                offColor={offColor}
                 onToggle={toggleSwitchFacebook}
                 style={styles.Switch}
                 />
@@ -43,7 +44,7 @@ export default function Socials(){
             <ToggleSwitch
                 isOn={state}
                 onColor="#F75274"
-                offColor="#F5F1F2"
+                offColor={offColor}
                 onToggle={toggleSwitch}
                 style={styles.Switch}
                 />
@@ -59,7 +60,7 @@ export default function Socials(){
             <ToggleSwitch
                 isOn={state}
                 onColor="#000000"
-                offColor="#F5F1F2"
+                offColor={offColor}
                 onToggle={toggleSwitch}
                 style={styles.Switch}
                 />
@@ -75,7 +76,7 @@ export default function Socials(){
             <ToggleSwitch
                 isOn={state}
                 onColor="#1DB954"
-                offColor="#F5F1F2"
+                offColor={offColor}
                 onToggle={toggleSwitch}
                 style={styles.Switch}
                 />
@@ -91,7 +92,7 @@ export default function Socials(){
             <ToggleSwitch
                 isOn={state}
                 onColor="#000000"
-                offColor="#F5F1F2"
+                offColor={offColor}
                 onToggle={toggleSwitch}
                 style={styles.Switch}
                 />

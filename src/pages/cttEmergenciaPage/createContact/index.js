@@ -5,7 +5,7 @@ import styles from "./styles"
 
 export default function Login(){
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([["SCA", ' - ' , "21970272132"]]);
 
     const [nameCont, setNameCont] = useState('');
 

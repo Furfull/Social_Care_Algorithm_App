@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, ScrollView, RefreshControl } from "react-native"
 import Notification from "../notification"
-import * as service from "../../../service/service"
+import Getter from "../../../service/service"
 
 export default function MainNotification(){
 
@@ -11,26 +11,27 @@ export default function MainNotification(){
         setRefreshing(true);
         setTimeout(() => {
         setRefreshing(false);
-        }, 2000);
+        }, 2000, getRespose());
     }, []);
 
-    const response = service.fecthUrl();
-
-    console.log(response)
-
-    data = [{id:1, date:"20-10-2023", message:"teste "}]
-
+    const [dataList, setDataList] = useState([{ id: 2, date: 'ATUALIZE:', text: 'Atualize para ver suas notificações', user_id: 1 }])
+    
+    async function getRespose() {
+        const request = await Getter()
+        setDataList(request)
+        return request
+    }
+     
     return(
         <ScrollView
         refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
           }
         >
-            {
-                data.reverse().map((item) => {
+                {dataList.map((item) => {
                     return <Notification  key={item.id} data={item}/>
-                }) 
-            }
+                }).reverse()}
+                
         </ScrollView>
     );
 }
