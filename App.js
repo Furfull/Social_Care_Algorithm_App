@@ -11,6 +11,7 @@ import MainProfile from "./src/pages/profilePage/main"
 import MainNotification from "./src/pages/notificationPage/main"
 import Create from "./src/pages/createPage/main"
 import MainReason from "./src/pages/reasonPage/main"
+import CreateForm from "./src/pages/formpage/main"
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export default function App(){
       <Stack.Screen name="Login" component={MainLogin} options={{headerShown: false}}/>
       <Stack.Screen name="Pages" component={Pages} options={{}}/>
       <Stack.Screen name="CriarConta" component={Create} options={{}}/>
+      <Stack.Screen name="CriarContaFormulario" component={CreateForm} options={{}}/>
     </Stack.Navigator>
     </NavigationContainer>
   )

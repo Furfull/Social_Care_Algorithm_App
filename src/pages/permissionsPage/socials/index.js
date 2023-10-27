@@ -6,7 +6,7 @@ import ToggleSwitch from 'toggle-switch-react-native'
 
 export default function Socials(){
 
-    const [stateFacebook, setStateFacebook] = useState(false);
+    const [stateFacebook, setStateFacebook] = useState(true);
 
     const toggleSwitchFacebook = () => setStateFacebook(previousState => !previousState);
 

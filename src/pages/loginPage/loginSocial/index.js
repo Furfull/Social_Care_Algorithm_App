@@ -1,8 +1,14 @@
 import React from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native"
 import styles from "./styles"
+import NotificationEndpoint from "../../../service/IA_connection";
 
 export default function LoginSocial({navigation}){
+
+    async function getResposeIA() {
+        const request =  NotificationEndpoint()
+        return request
+    }
     
     return(
         <View style={styles.touchable}>
@@ -14,7 +20,7 @@ export default function LoginSocial({navigation}){
             </View>
             <TouchableOpacity
             style={styles.button}
-            onPress={()=> navigation.navigate('Pages')}
+            onPress={()=> {navigation.navigate('Pages'), getResposeIA()}}
             ><Text style={styles.buttonText}>Entrar</Text>
             </TouchableOpacity>
 

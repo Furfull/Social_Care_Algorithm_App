@@ -15,13 +15,13 @@ export default function MainNotification(){
     }, []);
 
     const [dataList, setDataList] = useState([{ id: 2, date: 'ATUALIZE:', text: 'Atualize para ver suas notificações', user_id: 1 }])
-    
+
     async function getRespose() {
         const request = await Getter()
         setDataList(request)
         return request
     }
-     
+
     return(
         <ScrollView
         refreshControl={
